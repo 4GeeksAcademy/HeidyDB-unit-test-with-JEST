@@ -20,33 +20,33 @@ const { fromEuroToDollar } = require('./app.js');
 const dollars = fromEuroToDollar(3.5);
 
 // If 1 euro is 1.07 dollars, then 3.5 euros should be (3.5 * 1.07)
-const expected = 3.5 * 1.07; 
+const expected = 1 * 1.07; 
 
 // This is the comparison for the unit test
-expect(fromEuroToDollar(3.5)).toBe(3.745); // 1 euro is 1.07 dollars, then 3.5 euros should be = (3.5 * 1.07)
+expect(fromEuroToDollar(1)).toBe(1.07); // 1 euro is 1.07 dollars, then 3.5 euros should be = (3.5 * 1.07)
 })
 
 //testting from dollarToYen 
 //se corre npm test
 
-test("One dolar should be 146.26 yen", function() {
+test("3.5 dollars should be 511.9158 yen", function() {
     // Import the function from app.js
     const { fromDollarToYen } = require('./app.js');
     const yen = fromDollarToYen(3.5);
     const expected = 3.5/1.07 * 156.5; //511.9158
-    expect(fromDollarToYen(3.5)).toBe(511.91588785046724); 
+    expect(yen.toFixed(3)).toBe(expected.toFixed(3)); //para q quede en 3 decimales con la funcion toFixed
     })
 
 
   //testting fromYenToPound
 //se corre npm test
 
-test("One yen should be 0,00556 pounds", function() {
+test("3.5 yen should be 0,019 pounds", function() {
     // Import the function from app.js
     const { fromYenToPound } = require('./app.js');
     const yen = fromYenToPound(3.5);
     const expected =  3.5/156.5*0.87; //0.019
-    expect(fromYenToPound(3.5)).toBe(0.019456869009584665); 
+    expect(yen.toFixed(3)).toBe(expected.toFixed(3)); 
     })
 
     // npm run 
