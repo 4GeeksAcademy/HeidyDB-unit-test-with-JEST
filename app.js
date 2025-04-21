@@ -29,4 +29,8 @@ console.log(fromEuroToDollar(euro))
 
 // Export the function to be used on other files (test-js)
 // (similar to the keyword "export" when using webpack)
+<<<<<<< HEAD
 module.exports = { sum, fromEuroToDollar, fromYenToPound, fromDollarToYen };
+=======
+module.exports = { sum, fromEuroToDollar, fromDollarToYen, fromYenToPound  };
+>>>>>>> 1e8ea225f7a1d0034444226de3a88f9fd59853f6
